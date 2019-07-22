@@ -2,9 +2,10 @@
 import random, string
 
 # Copy authtoken from https://dashboard.ngrok.com/auth
-authtoken = 'YOUR_AUTH_TOKEN'
+authtoken = '6U1jo9QfAKveZ52M1287w_5rRAx83FNVSTDVQ54G3E9'
 
-password = ''.join(random.choice(string.ascii_letters + string.digits) for i in range(20))
+# password = ''.join(random.choice(string.ascii_letters + string.digits) for i in range(20))
+password = "Honganh99"
 
 # Download ngrok
 ! wget -q -c -nc https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
