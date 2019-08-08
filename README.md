@@ -12,8 +12,6 @@ Go to https://dashboard.ngrok.com/auth and get your authentication token after r
 
 - **Step 3:** Copy the whole content of the [get_ssh.py](./get_ssh.py)
 
-    ![kernel](./fig/kernel.png)
-
 - **Step 4:** Click `Commit` on the top right conner and wait a minutes for everything to set up. You should see a pop-up windows
 
     Save the`Root user` , `Root password` and `Port` to somewhere else since you won't be able to see this information after you close this windown
