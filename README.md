@@ -10,18 +10,16 @@ Go to https://dashboard.ngrok.com/auth and get your authentication token after r
 
     ![setting](./fig/setting.png)
 
-- **Step 3:** Copy the whole content of the [get_ssh.py](./get_ssh.py) (added the authentication token) and paste to the kernel as the first block of code.
+- **Step 3:** Copy the whole content of the [get_ssh.py](./get_ssh.py)
 
     ![kernel](./fig/kernel.png)
 
-- **Step 4:** Click `Commit` on the top right conner and wait a minutes for everything to set up. You should see a pop-up windows like this:
+- **Step 4:** Click `Commit` on the top right conner and wait a minutes for everything to set up. You should see a pop-up windows
 
-    ![commit](./fig/commit.png)
-
-    Save the `Root password` and the host address information `tcp://0.tcp.ngrok.io:17995` to somewhere else since you won't be able to see this information after you close this windown
+    Save the`Root user` , `Root password` and `Port` to somewhere else since you won't be able to see this information after you close this windown
 
 ## **How to SSH**    
-- `ssh root@0.tcp.ngrok.io -p 17995` <-- port number dictated in above output
+- `ssh -J teleport.anhdh.com root@User -p Port` <-- port number dictated in above output
 - With root password also dictated in above output
 - You can turn off the browser, disconnect from the server and it will still running. But keep in mind this server can only live for ***9 hours*** at max.
 
