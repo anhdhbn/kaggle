@@ -1,16 +1,3 @@
-# Generate root password
-import random, string
-
-# Copy authtoken from https://dashboard.ngrok.com/auth
-authtoken = '6U1jo9QfAKveZ52M1287w_5rRAx83FNVSTDVQ54G3E9'
-
-# password = ''.join(random.choice(string.ascii_letters + string.digits) for i in range(20))
-password = "Honganh99"
-
-# Download ngrok
-! wget -q -c -nc https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-! unzip -qq -n ngrok-stable-linux-amd64.zip
-
 # Setup sshd
 ! apt-get install -qq -o=Dpkg::Use-Pty=0 openssh-server pwgen > /dev/null
 
@@ -26,21 +13,15 @@ password = "Honganh99"
 # Run sshd
 get_ipython().system_raw('/usr/sbin/sshd -D &')
 
-
-# Create tunnel
-get_ipython().system_raw('./ngrok authtoken $authtoken && ./ngrok tcp 22 &')
-
 # Print root password
 import os
+os.system("echo 'Root alias: {}'".format(password))
 os.system("echo 'Root password: {}'".format(password))
+os.system("echo 'Port: {}'".format(port))
 
-# Get public address
-! curl -s http://localhost:4040/api/tunnels | python3 -c \
-    "import sys, json; print(json.load(sys.stdin)['tunnels'][0]['public_url'])"
+print('Root alias: {}'.format(password))
+print('Root password: {}'.format(password))
+print('Port: {}'.format(port))
 
-import requests, json
-url = json.loads(requests.get('http://localhost:4040/api/tunnels').text)['tunnels'][0]['public_url']
-os.system("echo '{}'".format(url))
-
-! echo 'Going to sleep infinity ;)'
-! sleep infinity
+# Create tunnel
+! ssh -o "StrictHostKeyChecking no"  -R $password:$port:localhost:22 teleport.anhdh.com
