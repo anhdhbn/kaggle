@@ -2,7 +2,6 @@
 Quick script to setup SSH to Kaggle Kernel for Deep Learning. In order to use that sexy P100 for free :P
 
 ## **How setup SSH connection**
-Go to https://dashboard.ngrok.com/auth and get your authentication token after register with Google or Github (You only have to do this once). Then replace your `ngrok` authentication token in line `5` of [get_ssh.py](./get_ssh.py) file
 
 - **Step 1:** Create a [new Kaggle kernel](https://www.kaggle.com/kernels) 
 
