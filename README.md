@@ -31,7 +31,7 @@ Quick script to setup SSH to Kaggle Kernel for Deep Learning. In order to use th
     And follow the instruction.
 
 - You only need to `Commit` again in the same kernel to get everything up and running again after terminate the server. `Root password` and host address information will be reset each time you commit.
-- You will need multiple `Kaggle` account and multiple `ngrok` account to get multiple server at the same time.  
+- You will need multiple `Kaggle` account to get multiple server at the same time.  
 
 ## **How to terminate the server**
 - Go to https://www.kaggle.com/kernels and look at the `Your Recent Kernels` section and hit `Stop`.
