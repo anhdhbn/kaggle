@@ -43,4 +43,3 @@ Go to https://dashboard.ngrok.com/auth and get your authentication token after r
     ![power_off](./fig/power_off.png)
 - Keep in mind everything will be lost (including process and files, ...) when you `Power off` or `Terminate` the kernel
 
-### **Feels free to contribute to this tiny repo since I don't have much experience with bash and linux ;). All Pull Request are welcomed :heart:**
