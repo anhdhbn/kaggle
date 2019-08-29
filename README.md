@@ -41,4 +41,6 @@ Quick script to setup SSH to Kaggle Kernel for Deep Learning. In order to use th
 
     ![power_off](./fig/power_off.png)
 - Keep in mind everything will be lost (including process and files, ...) when you `Power off` or `Terminate` the kernel
-
+```bash
+scp -o "ProxyJump teleport.anhdh.com" -rp face-recognition root@kaggle:/root/projects
+```
