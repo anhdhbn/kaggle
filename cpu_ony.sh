@@ -4,4 +4,3 @@ sudo echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 sudo echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 sudo echo "export LC_ALL=C.UTF-8" >> /root/.bashrc
 sudo /usr/sbin/sshd -D &
-

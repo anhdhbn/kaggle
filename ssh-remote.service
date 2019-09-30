@@ -1,0 +1,12 @@
+[Unit]
+Description="SSH Remote"
+Wants=network-online.target
+After=network.target network-online.target
+
+[Service]
+StartLimitIntervalSec=120
+ExecStart=/usr/local/sbin/startup.sh
+Restart  = always
+
+[Install]
+WantedBy = multi-user.target
